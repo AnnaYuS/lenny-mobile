@@ -1,0 +1,31 @@
+<ion-view view-title="Explore">
+
+  <!--<ion-nav-view name="pathsList">-->
+
+  <!--</ion-nav-view>-->
+
+
+
+  <ion-content>
+
+    <div class="card " ng-repeat="category in categories">
+      <div class="item item-text-wrap" >
+
+        <a  ui-sref="app.paths({categoryId: category._id})"><h2 >{{category.name}}</h2>
+
+        </a>
+
+      </div>
+    </div>
+    <!--<ion-item ng-repeat="path in paths" href="#/app/explore/{{path._id}}">-->
+    <!--{{path.name}}-->
+    <!--</ion-item>-->
+
+
+  </ion-content>
+
+
+
+</ion-view>
+
+

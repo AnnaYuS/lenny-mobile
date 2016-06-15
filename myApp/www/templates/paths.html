@@ -1,0 +1,21 @@
+<ion-view view-title="Learning paths">
+  <!--<ion-nav-view  name="Path"></ion-nav-view>-->
+
+  <ion-content>
+
+      <div class="card" ng-repeat="path in paths">
+
+        <div class="item item-text-wrap">
+        <a  ui-sref="app.path({ pathId: path._id})"> <h2 class="balanced">{{path.name}}</h2></a>
+          <p>{{path.description}}</p>
+          <p><span>Rating: </span>{{path.rating}}</p>
+        </div>
+      </div>
+      <!--<ion-item ng-repeat="path in paths" href="#/app/explore/{{path._id}}">-->
+        <!--{{path.name}}-->
+      <!--</ion-item>-->
+
+  </ion-content>
+</ion-view>
+
+

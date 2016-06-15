@@ -1,0 +1,47 @@
+<ion-view name="Path" view-title="Learning path">
+  <ion-content>
+<div class="container">
+  <div class="">
+  <h2 class="balanced">{{path.name}}</h2>
+      <p>{{path.description}}</p>
+
+  </div>
+<hr>
+  <div class=" row">
+        <div class="col">
+          <h6>Rating</h6>
+          <h6>Comments</h6>
+          <h6>Author</h6>
+          <h6>Admin</h6>
+          <h6>Peers</h6>
+          <h6>Categories</h6>
+
+        </div>
+        <div class="col.col-75 ">
+          <p>{{path.rating}}</p>
+          <p>{{comments.length}}</p>
+          <p>{{path.author}}</p>
+          <p>{{path.admin}}</p>
+          <p>{{participants.length}}</p>
+          <p><span ng-repeat="category in path.categories">{{category.name}}{{$last ? '' : ', '}}</span></p>
+        </div>
+      </div>
+      <br>
+      <p><button class="button button-assertive">Add to wishlist</button></p>
+      <br>
+<div class="">
+  <h3>Steps <span>({{path.steps.length}})</span></h3>
+      <div ng-repeat="step in path.steps">
+        <h2>{{step.name}}</h2>
+        <p>{{step.description}}</p>
+      </div>
+</div>
+    <div class="">
+      <h3>Comments <span>({{path.comments.length}})</span></h3>
+      <div ng-repeat="comment in path.comments">
+        <p>{{comment.text}}</p>
+      </div>
+    </div>
+</div>
+  </ion-content>
+</ion-view>
